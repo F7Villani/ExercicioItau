@@ -1,0 +1,42 @@
+﻿@model SistemaChamadosMVC.Models.chamadosDB
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>chamadosDB</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.sistemaChamado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sistemaChamado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descricao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.usuariosDB.nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.usuariosDB.nome)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.chamadoID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

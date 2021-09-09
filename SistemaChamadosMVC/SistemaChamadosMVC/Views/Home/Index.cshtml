@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Sistema de Chamados</h1>
+    <p class="lead"> Sistema de Chamados por usuário, cada usuário pode criar se cadastrar no sistema e criar seu próprio chamado </p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>@Html.ActionLink("Usuario","Index","usuariosDBs") </h2>
+        <p>
+            Crie novos usuários
+        </p>
+        
+    </div>
+    <div class="col-md-4">
+        <h2>@Html.ActionLink("Chamados", "Index", "chamadosDBs") </h2>
+        <p> Crie novos chamados</p>
+    </div>
+    
+</div>

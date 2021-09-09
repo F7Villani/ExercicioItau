@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BancoDadosModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="chamadosDB">
+    <Key>
+      <PropertyRef Name="chamadoID" />
+    </Key>
+    <Property Name="chamadoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="usuarioID" Type="Int32" Nullable="false" />
+    <Property Name="sistemaChamado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="descricao" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="usuariosDB" Relationship="Self.FK__chamadosD__usuar__2A4B4B5E" FromRole="chamadosDB" ToRole="usuariosDB" />
+  </EntityType>
+  <EntityType Name="usuariosDB">
+    <Key>
+      <PropertyRef Name="usuarioID" />
+    </Key>
+    <Property Name="usuarioID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="chamadosDB" Relationship="Self.FK__chamadosD__usuar__2A4B4B5E" FromRole="usuariosDB" ToRole="chamadosDB" />
+  </EntityType>
+  <Association Name="FK__chamadosD__usuar__2A4B4B5E">
+    <End Role="usuariosDB" Type="Self.usuariosDB" Multiplicity="1" />
+    <End Role="chamadosDB" Type="Self.chamadosDB" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="usuariosDB">
+        <PropertyRef Name="usuarioID" />
+      </Principal>
+      <Dependent Role="chamadosDB">
+        <PropertyRef Name="usuarioID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ExemploBDEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="chamadosDB" EntityType="Self.chamadosDB" />
+    <EntitySet Name="usuariosDB" EntityType="Self.usuariosDB" />
+    <AssociationSet Name="FK__chamadosD__usuar__2A4B4B5E" Association="Self.FK__chamadosD__usuar__2A4B4B5E">
+      <End Role="usuariosDB" EntitySet="usuariosDB" />
+      <End Role="chamadosDB" EntitySet="chamadosDB" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

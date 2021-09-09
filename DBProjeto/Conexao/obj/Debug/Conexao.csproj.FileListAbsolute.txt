@@ -1,0 +1,7 @@
+E:\Aprendendo C#\DBProjeto\Conexao\bin\Debug\Conexao.exe.config
+E:\Aprendendo C#\DBProjeto\Conexao\bin\Debug\Conexao.exe
+E:\Aprendendo C#\DBProjeto\Conexao\bin\Debug\Conexao.pdb
+E:\Aprendendo C#\DBProjeto\Conexao\obj\Debug\Conexao.csprojAssemblyReference.cache
+E:\Aprendendo C#\DBProjeto\Conexao\obj\Debug\Conexao.csproj.CoreCompileInputs.cache
+E:\Aprendendo C#\DBProjeto\Conexao\obj\Debug\Conexao.exe
+E:\Aprendendo C#\DBProjeto\Conexao\obj\Debug\Conexao.pdb

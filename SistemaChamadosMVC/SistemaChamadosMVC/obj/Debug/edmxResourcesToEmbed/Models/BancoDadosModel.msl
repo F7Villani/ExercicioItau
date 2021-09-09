@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BancoDadosModelStoreContainer" CdmEntityContainer="ExemploBDEntities">
+    <EntitySetMapping Name="chamadosDB">
+      <EntityTypeMapping TypeName="BancoDadosModel.chamadosDB">
+        <MappingFragment StoreEntitySet="chamadosDB">
+          <ScalarProperty Name="chamadoID" ColumnName="chamadoID" />
+          <ScalarProperty Name="usuarioID" ColumnName="usuarioID" />
+          <ScalarProperty Name="sistemaChamado" ColumnName="sistemaChamado" />
+          <ScalarProperty Name="descricao" ColumnName="descricao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="usuariosDB">
+      <EntityTypeMapping TypeName="BancoDadosModel.usuariosDB">
+        <MappingFragment StoreEntitySet="usuariosDB">
+          <ScalarProperty Name="usuarioID" ColumnName="usuarioID" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
