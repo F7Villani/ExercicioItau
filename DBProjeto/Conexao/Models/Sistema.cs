@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace Conexao.Models
 {
+    // Classe principal do programa
+    // O sistema apresenta o menu ao usuário e comanda todas as funcionalidades do aplicativo
     class Sistema
     {
         private BancoDados bd;
@@ -105,6 +107,8 @@ namespace Conexao.Models
                 op = Console.ReadLine();
             }
         }
+
+        // Escreve na tela o Menu de funcionalidades
         public void Menu()
         {
             Console.Clear();

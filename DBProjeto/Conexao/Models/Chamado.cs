@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Conexao.Models
 {
+    // Classe que representa um chamado e suas caracteristicas
     class Chamado
     {
         // Propriedades 
@@ -16,6 +17,7 @@ namespace Conexao.Models
         public string descricao { get; set; }
 
         // Construtor
+        // O construtor já adiciona o novo chamado no banco de dados
         public Chamado(int usuarioId, string descricao)
         {
             this.usuarioId = usuarioId;
